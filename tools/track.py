@@ -160,7 +160,7 @@ def SMS():
       msg = input(green+"Enter Message: "+cyan)
       print("")
       send = requests.post("https://textbelt.com/text", data={'phone': number, 'message': msg, 'key': 'textbelt'}).json()
-      if send['success'] == "True":
+      if send['success'] == True:
        print(green+"Message Sent")
        print(green+"You remained with: " + req['quotaRemaining'])
        print("")
